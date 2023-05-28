@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../static/css/launch.css" rel="stylesheet" />
+    <title>注册</title>
+</head>
+<body>
+    <form method="post" action="register" id="registerForm">
+        <div class="registerTitleTx fs-3">个人信息</div>
+        <hr/>
+        <div id="firstLine">
+            <div class="form-floating" id="nameInput">
+                <input type="text" class="form-control" placeholder="姓名" name="name" />
+                <label><span class="red-tx">*</span>姓名</label>
+            </div>
+            <div id="sexRadio">
+                <div id="sexLabel"><span class="red-tx">*</span>性别</div>
+                <div id="sexSelect">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" value="0">
+                        <label class="form-check-label">男</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" value="1">
+                        <label class="form-check-label">女</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" placeholder="手机号" name="username"/>
+            <label><span class="red-tx">*</span>手机号</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" placeholder="地址" name="address" />
+            <label>地址</label>
+        </div>
+        <div class="registerTitleTx registerTitleMargintop fs-3">设置密码</div>
+        <hr/>
+        <input class="passwordInputSimple form-control" type="password" placeholder="请输入密码" name="password" />
+        <input class="passwordInputSimple form-control" type="password" placeholder="请再次输入密码确认" />
+        <div id="passwordNEqual">两次输入的密码不一致！</div>
+        <div id="loginBtnGroup">
+            <button type="button" class="btn btn-link btn-lg" id="linkLoginBtn">登录</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="registerBtn">注册</button>
+        </div>
+    </form>
+    <img src="../static/image/logininfo-small.png" id="registerImg" />
+
+    <script type="text/javascript" src="../static/js/register.js"></script>
+</body>
+</html>

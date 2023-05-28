@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+@import url(value.css);
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--template-secondary);
+}
+
+img{
+    display: block;
+    box-shadow: 3px 3px 15px var(--bs-gray-600);
+    z-index: 100;
+}
+
+/* login.html */
+#loginImg{
+    height: 80%;
+}
+
+form{
+    padding: 3%;
+
+    background-color: white;
+    box-shadow: 15px 15px 75px var(--template-primary);
+    z-index: 0;
+}
+#loginForm{
+    width: 45%;
+}
+
+#loginTitleTx{
+    text-align: center;
+    margin-bottom: 10%;
+    color: var(--bs-gray-500);
+}
+
+.form-floating{
+    margin-top: 5%;
+}
+
+.form-select{
+    width: 27%;
+}
+
+#loginBtnGroup{
+    text-align: right;
+    margin-top: 5%;
+}
+.btn{
+    width: var(--template-btn-width);
+}
+.btn-primary{
+    background-color: var(--template-primary);
+    border-color: var(--template-secondary);
+    border-width: var(--template-btn-border-width);
+}
+.btn-link{
+    color: var(--template-primary);
+}
+
+/* register.html */
+#registerImg{
+    height: 90%;
+}
+
+#registerForm{
+    width: 50%;
+}
+
+.registerTitleTx{
+    margin-bottom: 0;
+
+    color: var(--bs-gray-500);
+}
+.registerTitleMargintop{
+    margin-top: 7%;
+}
+hr{
+    margin-top: 0;
+}
+
+.red-tx{
+    color: var(--bs-red);
+}
+
+#firstLine{
+    margin-top: 4%;
+
+    display: flex;
+    justify-content: space-between;
+}
+#nameInput{
+    margin-top: 0;
+    flex: 6;
+}
+#sexRadio{
+    height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+    margin-left: 2%;
+    border: 1px solid;
+    border-radius: var(--bs-border-radius);
+    border-color: var(--bs-border-color);
+    /* border-color: var(--bs-gray-300); */
+    
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sexLabel{
+    flex: 1;
+    text-align: center;
+
+    border-right: 1px solid;
+    border-radius: var(--bs-border-radius);
+    border-color: var(--bs-border-color);
+
+    padding-right: 1%;
+    padding-left: 1%;
+}
+#sexSelect{
+    flex: 4;
+    display: flex;
+    justify-content: space-around;
+}
+
+.passwordInputSimple{    
+    margin-top: 4%;
+}
+
+#passwordNEqual{
+    margin-top: 1%;
+    text-align: center;
+    color: var(--bs-red);
+
+    display: none;
+}
+
+#registerBtn:disabled{
+    background-color: var(--template-primary-disabled);
+    border-color: var(--template-primary);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../static/css/launch.css" rel="stylesheet" />
+    <title>登录</title>
+</head>
+<body>
+    <img src="../static/image/logininfo.png" id="loginImg" />
+    <form method="post" action="index" id="loginForm">
+        <div class="fs-1" id="loginTitleTx">医院管理信息系统</div>
+        <select class="form-select" name="role">
+            <option value="0">我是患者</option>
+            <option value="1">我是医生</option>
+            <option value="2">管理员</option>
+        </select>
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" placeholder="手机号" name="username"/>
+            <label>手机号</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" placeholder="密码" name="password" />
+            <label>密码</label>
+        </div>
+        <div id="loginBtnGroup">
+            <button type="button" class="btn btn-link btn-lg" id="linkRegisterBtn">注册</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="loginBtn">登录</button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="../static/js/login.js"></script>
+</body>
+</html>

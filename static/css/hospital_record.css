@@ -1,0 +1,52 @@
+@charset "utf8";
+
+@import url(iframe.css);
+
+.card-body{
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+}
+
+.card-body ol{
+    flex: 3;
+}
+.list-group li{
+    flex-grow: 1;
+}
+.list-group li .fw-bold{
+    margin-bottom: 2%;
+
+    color: var(--bs-gray-500);
+}
+.list-group li span{
+    color: var(--bs-primary);
+}
+
+.doctor{
+    flex: 5;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.doctor .card-footer{
+    text-align: center;
+}
+
+.expense{
+    flex: 4;
+
+    padding: 3%;
+}
+.expense span{
+    display: block;
+}
+.expense h5{
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 3%;
+
+    color: var(--bs-primary);
+}
+.payBtnGroup{
+    text-align: right;
+}

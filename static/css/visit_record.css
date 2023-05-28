@@ -1,0 +1,41 @@
+@charset "utf8";
+
+@import url(value.css);
+@import url(iframe.css);
+
+.accordion-flush{
+    border: 1px solid var(--bs-gray-400);
+    border-radius: var(--bs-border-radius);
+}
+
+.doctorInfo{
+    margin-bottom: 3%;
+}
+.accordion-body .doctorName{
+    color: var(--bs-primary);
+}
+
+.contentTitleTx{
+    text-align: center;
+
+    color: var(--bs-gray-600);
+}
+.content{
+    padding: 2%;
+
+    border: 1px solid var(--bs-gray-300);
+    border-radius: var(--bs-border-radius);
+}
+.partTitleTx{
+    color: var(--bs-gray-600);
+}
+.symptomTx{
+    margin-top: 1%;
+}
+
+.content .payBtnGroup{
+    text-align: right;
+}
+.content .pay{
+    margin-top: 3%;
+}

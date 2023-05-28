@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+:root {
+    --template-primary: #4098CA;
+    --template-primary-disabled: #618c9b;
+    --template-secondary: #97E2FC;
+
+    --template-btn-border-width: 3px;
+    --template-btn-width: 20%
+}

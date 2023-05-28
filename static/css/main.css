@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import url(value.css);
+
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+}
+
+#sidebar{
+    height: 100%;
+}
+#sidebarTitleTx{
+    color: var(--bs-gray-600);
+}
+#sidebar .active{
+    background-color: var(--template-primary);
+}

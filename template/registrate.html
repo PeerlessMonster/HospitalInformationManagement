@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../static/css/registrate.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: none;" id="patientName">{{.patientName}}</div>
+    
+    {{range .doctors}}
+    {{/* doctor[doctorName, sex, department, staff] */}}
+    <div class="card" style="width: 18rem;">
+        <img src='../static/image/doctor_{{if eq (index . 1) "男"}}male{{else if eq (index . 1) "女"}}female{{end}}_icon.png' class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{(index . 0)}}</h5>
+          <p class="card-text">{{(index . 2)}} · {{(index . 3)}}</p>
+          <div>
+            <a href="#" class="btn btn-primary">挂号</a>
+          </div>
+        </div>
+      </div>
+    {{end}}
+
+    <script type="text/javascript" src="../static/js/registrate.js"></script>
+</body>
+</html>
