@@ -33,6 +33,7 @@ func main() {
 	router.GET("/visit_record/:patientName", procVisit)
 	router.POST("/visit_record/post/:listNo", procMedicinelist)
 	router.GET("/hospital_record/:patientName", procHospital)
+	router.GET("/pharmacy", procPharmacy)
 	router.GET("/empty", func(ctx *gin.Context) {
 		ctx.HTML(http.StatusOK, "empty.html", nil)
 	})
@@ -426,6 +427,30 @@ func procHospital(ctx *gin.Context) {
 		"doctorDepart": doctorDepart,
 		"staff":        staff,
 		"records":      records,
+	})
+}
+
+func procPharmacy(ctx *gin.Context) {
+	db := DBUtil.GetInstance()
+	sql := "SELECT medicineName, medicinePrice, inventory FROM medicine"
+	rows, err := db.Raw(sql).Rows()
+	if err != nil {
+		panic(err)
+	}
+
+	var records [][]string
+	i := 1
+	for rows.Next() {
+		var record [4]string
+		rows.Scan(&record[1], &record[2], &record[3])
+
+		record[0] = strconv.Itoa(i)
+		i++
+		records = append(records, record[:])
+	}
+
+	ctx.HTML(http.StatusOK, "pharmacy.html", gin.H{
+		"records": records,
 	})
 }
 
